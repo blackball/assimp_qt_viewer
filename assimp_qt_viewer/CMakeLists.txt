@@ -4,6 +4,10 @@ project(assimp_qt_viewer)
 # Qt5 requires cmake 3.1 or newer
 cmake_minimum_required(VERSION 3.1)
 
+if(POLICY CMP0072)
+  cmake_policy(SET CMP0072 NEW)
+endif()
+
 FIND_PACKAGE(OpenGL QUIET)
 
 # Qt5 version
